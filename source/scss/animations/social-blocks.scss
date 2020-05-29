@@ -1,0 +1,17 @@
+.social-block__toggler {
+  transition: color 0.35s ease;
+
+  &::before {
+    transition: width 0.35s ease-out, height 0.35s ease-out,
+      border-color 0.35s ease;
+  }
+}
+
+.social-block__list {
+  transition: opacity 0.35s ease 0.15s;
+}
+
+.social-block__link {
+  transition: background-color 0.3s ease, color 0.35s ease,
+    border-color 0.3s ease;
+}

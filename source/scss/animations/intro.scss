@@ -1,0 +1,12 @@
+.intro__message {
+  transform: translateY(20%);
+  opacity: 0;
+  transition: opacity 0.35s ease 0.25s, transform 0.35s ease-out 0.25s;
+}
+
+.screen.active {
+  .intro__message {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
