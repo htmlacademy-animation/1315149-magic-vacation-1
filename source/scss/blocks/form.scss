@@ -2,6 +2,7 @@
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: flex-end;
 }
 
 .form__label {
@@ -79,9 +80,10 @@
 }
 
 .form__button {
-  flex-grow: 1;
+  min-width: 18rem;
 
   @media (orientation: portrait) {
+    min-width: initial;
     position: relative;
     flex: none;
     padding: 0;
@@ -91,6 +93,7 @@
   }
 
   @media (max-width: $tablet) and (orientation: landscape) {
+    min-width: initial;
     position: relative;
     flex: none;
     padding: 0;
@@ -100,6 +103,7 @@
   }
 
   @media (max-width: $mobile) and (orientation: landscape) {
+    min-width: initial;
     width: 4rem;
     height: 4rem;
   }
