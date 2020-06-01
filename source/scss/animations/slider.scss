@@ -20,6 +20,16 @@
       transform: translateY(0);
       opacity: 1;
       transition: opacity 0.5s ease 0.4s, transform 0.5s ease 0.4s;
+
+      @media (orientation: portrait) {
+        transform: translateX(2rem);
+        opacity: 0;
+      }
+
+      @media (max-width: $mobile) and (orientation: landscape) {
+        transform: translateX(2rem);
+        opacity: 0;
+      }
     }
   }
 }
