@@ -1,3 +1,32 @@
+.page-header__logo {
+  transform: translateX(-3rem);
+  opacity: 0;
+  transition: transform 1s cubic-bezier(0.5, 0, 0.15, 1), opacity 1s cubic-bezier(0.75, 0, 0, 1);
+
+  .loaded & {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.page-header__toggler {
+  opacity: 0;
+  transition: opacity 1s cubic-bezier(0.4, 0, 0.25, 1) 0.3s;
+
+  .loaded & {
+    opacity: 1;
+  }
+}
+
+.page-header__nav {
+  opacity: 0;
+  transition: opacity 1s cubic-bezier(0.4, 0, 0.25, 1) 0.3s;
+
+  .loaded & {
+    opacity: 1;
+  }
+}
+
 .page-header__menu {
   a {
     transition: color 0.35s ease;
