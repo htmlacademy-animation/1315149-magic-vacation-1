@@ -1,3 +1,21 @@
+.overlay-screen {
+  background-color: $c-dark;
+  width: 100%;
+  height: 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.screen--prizes.active {
+  transition: visibility 0.5s ease 1s, opacity 0.5s ease 1s;
+
+  & ~ .overlay-screen {
+    height: 100%;
+    transition: height 1s cubic-bezier(0.55, 0, 0.55, 1);
+  }
+}
+
 .screen__footer {
   transform: translateY(100%);
   transition: transform 1s cubic-bezier(0, 0.85, 0.15, 1);

@@ -10,6 +10,7 @@
     height: 0;
     min-height: initial;
     visibility: hidden;
+    opacity: 0;
   }
 
   @media (max-width: $tablet) and (orientation: portrait) {
@@ -301,10 +302,6 @@
     background-size: auto calc(100vh - 13.8rem), 100% 25rem;
     background-position: top center, bottom center;
   }
-}
-
-.screen--prizes {
-  background-color: $c-dark;
 }
 
 .screen--game {
