@@ -2572,7 +2572,7 @@ img {
   min-height: 100vh;
   z-index: 1;
   overflow: hidden; }
-  .screen:not(.active) {
+  .screen.screen--hidden {
     height: 0;
     min-height: initial;
     visibility: hidden;
@@ -3345,16 +3345,23 @@ img {
 .overlay-screen {
   background-color: #5f458c;
   width: 100%;
-  height: 0;
+  height: 100%;
   position: fixed;
   bottom: 0;
-  left: 0; }
+  left: 0;
+  transform: scaleY(0);
+  transform-origin: bottom; }
 
 .screen--prizes.active {
-  transition: visibility 0.5s ease 1s, opacity 0.5s ease 1s; }
-  .screen--prizes.active ~ .overlay-screen {
-    height: 100%;
-    transition: height 1s cubic-bezier(0.55, 0, 0.55, 1); }
+  transition: visibility 0.5s ease 0.5s, opacity 0.5s ease 0.5s; }
+
+.active ~ .screen--prizes.active ~ .overlay-screen,
+.screen--prizes.active ~ .active ~ .overlay-screen {
+  z-index: 2; }
+
+.screen--prizes.active ~ .overlay-screen {
+  transform: scaleY(1);
+  transition: transform 1s cubic-bezier(0.55, 0, 0.55, 1); }
 
 .screen__footer {
   transform: translateY(100%);
