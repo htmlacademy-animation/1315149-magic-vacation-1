@@ -1,19 +1,26 @@
 .overlay-screen {
   background-color: $c-dark;
   width: 100%;
-  height: 0;
+  height: 100%;
   position: fixed;
   bottom: 0;
   left: 0;
+  transform: scaleY(0);
+  transform-origin: bottom;
 }
 
 .screen--prizes.active {
-  transition: visibility 0.5s ease 1s, opacity 0.5s ease 1s;
+  transition: visibility 0.5s ease 0.5s, opacity 0.5s ease 0.5s;
+}
 
-  & ~ .overlay-screen {
-    height: 100%;
-    transition: height 1s cubic-bezier(0.55, 0, 0.55, 1);
-  }
+.active ~ .screen--prizes.active ~ .overlay-screen,
+.screen--prizes.active ~ .active ~ .overlay-screen {
+  z-index: 2;
+}
+
+.screen--prizes.active ~ .overlay-screen {
+  transform: scaleY(1);
+  transition: transform 1s cubic-bezier(0.55, 0, 0.55, 1);
 }
 
 .screen__footer {

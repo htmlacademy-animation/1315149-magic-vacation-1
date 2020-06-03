@@ -6,7 +6,7 @@
   z-index: 1;
   overflow: hidden;
 
-  &:not(.active) {
+  &.screen--hidden {
     height: 0;
     min-height: initial;
     visibility: hidden;
