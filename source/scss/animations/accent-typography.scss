@@ -1,0 +1,36 @@
+.accent__typography-word {
+  padding: 0.2em 0.1em;
+  margin: -0.2em -0.1em;
+  white-space: nowrap;
+  display: inline-block;
+  overflow: hidden;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  span {
+    transform: translate3d(0, 1.4em, 0);
+    display: inline-block;
+  }
+}
+
+.accent__typography-space {
+  display: inline-block;
+}
+
+.accent__typography:not(.active) {
+  .accent__typography-word {
+    span {
+      transition: none !important;
+    }
+  }
+}
+
+.accent__typography.active {
+  .accent__typography-word {
+    span {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+}
