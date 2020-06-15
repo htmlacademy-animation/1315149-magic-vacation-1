@@ -40,15 +40,15 @@ $delay: 0.5s;
 
 .rules__item.active {
   &::before {
-    animation-name: popOut;
+    animation-name: zoomIn;
   }
 
   &::after {
-    animation-name: appear;
+    animation-name: fadeIn;
   }
 
   p {
-    animation-name: appear, moveLeft;
+    animation-name: fadeIn, slideInRight;
   }
 }
 
@@ -74,13 +74,13 @@ $delay: 0.5s;
 }
 
 .rules__link.active {
-  animation-name: appear;
+  animation-name: fadeIn;
 
   &::before {
-    animation-name: growLeft;
+    animation-name: growInRight;
   }
 
   .rules__link-text {
-    animation-name: appear;
+    animation-name: fadeIn;
   }
 }

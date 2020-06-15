@@ -25,7 +25,7 @@ export default () => {
   });
 
   rulesItems[rulesItems.length - 1].addEventListener(`animationend`, (evt) => {
-    if (evt.animationName === `moveLeft`) {
+    if (evt.animationName === `slideInRight`) {
       setActive(rulesBtn);
     }
   });
